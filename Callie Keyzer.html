@@ -1,0 +1,285 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Callie Keyzer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a soft two-tone band hero, then a single readable column with a school-year timeline for experience */
+:root {
+  --bg: #fbf7fb;
+  --surface: #ffffff;
+  --fg: #2a2540;
+  --muted: #6b6684;
+  --pink: #e8799f;
+  --pink-soft: #fbe1ea;
+  --blue: #4f86c6;
+  --blue-soft: #dceafa;
+  --line: #e6dfee;
+  --display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17152a; --surface: #211e38; --fg: #f1eef8; --muted: #aaa4c4;
+    --pink: #f59bbb; --pink-soft: #3a2340; --blue: #8cb8ec; --blue-soft: #1f2d4a; --line: #332f50;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17152a; --surface: #211e38; --fg: #f1eef8; --muted: #aaa4c4;
+  --pink: #f59bbb; --pink-soft: #3a2340; --blue: #8cb8ec; --blue-soft: #1f2d4a; --line: #332f50;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
+}
+.wrap {
+  max-width: 880px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Hero */
+.hero {
+  background:
+    radial-gradient(120% 140% at 0% 0%, var(--pink-soft) 0%, transparent 55%),
+    radial-gradient(120% 140% at 100% 100%, var(--blue-soft) 0%, transparent 55%),
+    var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.hero .wrap { padding-block: 64px 48px; display: grid; gap: 20px; }
+.eyebrow {
+  font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue);
+}
+h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(3rem, 9vw, 5.5rem); line-height: .95; margin: 0; text-wrap: balance;
+}
+h1 em { color: var(--pink); font-style: italic; }
+.lede { max-width: 58ch; color: var(--muted); margin: 0; font-size: 1.125rem; }
+.contact { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 8px 8px 8px 16px; font-size: .95rem; min-width: 0;
+}
+.chip span { user-select: all; overflow-wrap: anywhere; }
+.chip.plain { padding-right: 16px; }
+.copy {
+  font: inherit; font-size: .8rem; font-weight: 600; cursor: pointer;
+  border: 0; border-radius: 999px; padding: 4px 12px;
+  background: var(--blue-soft); color: var(--blue);
+}
+.copy:hover { background: var(--pink-soft); color: var(--pink); }
+.copy:focus-visible, a:focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; }
+
+/* Sections */
+main .wrap { padding-block: 56px 72px; display: grid; gap: 64px; }
+section { display: grid; gap: 24px; }
+h2 {
+  font-family: var(--display); font-weight: 400; font-size: 2.25rem; line-height: 1.1; margin: 0;
+  display: flex; align-items: baseline; gap: 14px;
+}
+h2::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--pink), var(--blue)); opacity: .5; }
+
+/* Skills */
+.skills { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.skills li {
+  padding: 8px 16px; border-radius: 999px; font-weight: 500; font-size: .95rem;
+}
+.skills li:nth-child(odd) { background: var(--pink-soft); color: var(--fg); }
+.skills li:nth-child(even) { background: var(--blue-soft); color: var(--fg); }
+
+/* Timeline */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.job {
+  display: grid; grid-template-columns: 150px 1fr; gap: 24px;
+  padding-block: 24px; border-top: 1px solid var(--line);
+}
+.job:first-child { border-top: 0; padding-top: 0; }
+.when {
+  font-size: .85rem; font-weight: 600; color: var(--muted);
+  font-variant-numeric: tabular-nums; line-height: 1.5;
+}
+.when .yrs { display: block; font-family: var(--display); font-size: 1.6rem; font-weight: 400; color: var(--blue); line-height: 1.1; }
+.job:nth-child(even) .when .yrs { color: var(--pink); }
+.job h3 { margin: 0; font-size: 1.15rem; font-weight: 700; line-height: 1.3; }
+.role { color: var(--muted); font-weight: 500; margin: 2px 0 10px; }
+.job ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; max-width: 62ch; }
+.job li::marker { color: var(--pink); }
+.badge {
+  display: inline-block; margin-top: 10px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--blue); border: 1.5px solid var(--blue); border-radius: 6px; padding: 3px 10px;
+}
+.job > div { min-width: 0; }
+
+/* Education */
+.edu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.school {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px;
+  display: grid; gap: 6px; align-content: start;
+}
+.school h3 { margin: 0; font-size: 1.1rem; }
+.school .meta { color: var(--muted); font-size: .92rem; font-variant-numeric: tabular-nums; }
+.school p { margin: 6px 0 0; }
+.school.pink { border-top: 4px solid var(--pink); }
+.school.blue { border-top: 4px solid var(--blue); }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+footer .wrap { padding-block: 24px; }
+
+@media (max-width: 620px) {
+  .hero .wrap { padding-block: 44px 36px; }
+  .job { grid-template-columns: 1fr; gap: 8px; }
+  .edu { grid-template-columns: 1fr; }
+  h2 { font-size: 1.9rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .copy { transition: background .15s, color .15s; }
+}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Educator · Paraprofessional · Caregiver</div>
+    <h1>Callie <em>Keyzer</em></h1>
+    <p class="lede">Teacher and paraprofessional with experience from infant care through elementary classrooms. Patient, organized, and focused on helping every student set goals and grow.</p>
+    <div class="contact">
+      <div class="chip"><span id="email">keyzerca@gmail.com</span><button class="copy" id="copy-email" data-target="email" type="button">Copy</button></div>
+      <div class="chip"><span id="phone">(862) 377-4099</span><button class="copy" id="copy-phone" data-target="phone" type="button">Copy</button></div>
+      <div class="chip plain"><span>Hawthorne, NJ</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <ul class="skills">
+        <li>Classroom management</li>
+        <li>Lesson planning</li>
+        <li>Effective communication</li>
+        <li>Conflict resolution</li>
+        <li>Educational research</li>
+        <li>Patience with others' needs</li>
+        <li>Highly organized &amp; motivated</li>
+        <li>Adapts to fast-changing environments</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <ol class="timeline" reversed>
+        <li class="job">
+          <div class="when"><span class="yrs">2023–24</span>Aug 2023 – Jul 2024</div>
+          <div>
+            <h3>Acton Academy West Austin</h3>
+            <p class="role">Teacher</p>
+            <ul>
+              <li>Maintained a nurturing environment while helping students set boundaries and goals.</li>
+              <li>Wrote and submitted weekly lesson plans in all subject areas.</li>
+              <li>Built activities around students' interests to encourage a love of learning.</li>
+              <li>Collaborated with faculty and administration.</li>
+              <li>Graded and documented each student's growth and achievements.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when"><span class="yrs">2022–23</span>Sep 2022 – Aug 2023</div>
+          <div>
+            <h3>Austin Independent School District</h3>
+            <p class="role">Substitute Teacher</p>
+            <ul>
+              <li>Filled in wherever support was needed and helped run everyday classroom procedures.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when"><span class="yrs">2021–22</span>Sep 2021 – Jun 2022</div>
+          <div>
+            <h3>School Aged Child Care, Hawthorne Public Schools</h3>
+            <p class="role">Teacher</p>
+            <ul>
+              <li>Took attendance and accounted for every student's needs.</li>
+              <li>Helped students with homework.</li>
+              <li>Created activities and programs for the after-school hours.</li>
+              <li>Kept open communication with parents and assisted with pick-up.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when"><span class="yrs">2020–22</span>Jan 2020 – Jul 2022</div>
+          <div>
+            <h3>Hawthorne Public Schools</h3>
+            <p class="role">Paraprofessional</p>
+            <ul>
+              <li>Supported the learning and daily needs of an assigned student.</li>
+              <li>Ran academic programs, enforced boundaries, and encouraged and rewarded progress.</li>
+              <li>Helped with everyday tasks such as using the bathroom and eating meals.</li>
+              <li>Ran programs remotely over Zoom and Google Meet during Covid.</li>
+            </ul>
+            <span class="badge">CPI Certified</span>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when"><span class="yrs">2017–20</span>Sep 2017 – Jan 2020</div>
+          <div>
+            <h3>Maryann's Daycare</h3>
+            <p class="role">Caregiver</p>
+            <ul>
+              <li>Provided daily care for children ages 5 months to 4 years.</li>
+              <li>Handled feeding, diaper changes, and a daily routine of socialization and play.</li>
+              <li>Built relationships with each child to understand their growing needs.</li>
+              <li>Kept the room organized and clean for the children's safety.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="edu-h">
+      <h2 id="edu-h">Education</h2>
+      <div class="edu">
+        <div class="school blue">
+          <h3>William Paterson University</h3>
+          <div class="meta">Wayne, NJ · Sep 2020 – Present</div>
+          <p>Working toward a BA in History</p>
+        </div>
+        <div class="school pink">
+          <h3>Hawthorne High School</h3>
+          <div class="meta">Hawthorne, NJ · Sep 2013 – Jun 2017</div>
+          <p>Member of the National Honor Society and Italian Honor Society</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Callie A. Keyzer · keyzerca@gmail.com · (862) 377-4099</div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const el = document.getElementById(btn.dataset.target);
+    const text = el.textContent.trim();
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1500); };
+    const fallback = () => {
+      const r = document.createRange(); r.selectNodeContents(el);
+      const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+      setTimeout(() => btn.textContent = 'Copy', 1500);
+    };
+    try {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body></html>
